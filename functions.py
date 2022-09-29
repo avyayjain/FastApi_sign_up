@@ -4,11 +4,8 @@ from sqlalchemy.orm import Session
 from starlette import schemas
 from passlib.context import CryptContext
 from fastapi import Depends
-import db
-import jwt
-# from .db import get_db
-from db.db import User
-from signUp import UserDetails
+
+from db import db
 
 
 def check_user_exist(database: Session, email: str):
