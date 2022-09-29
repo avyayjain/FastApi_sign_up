@@ -26,9 +26,6 @@ def create_user(database: Session, user: db.User):
     return user
 
 
-from db import User
-
-
 def find_user_pass(user_email, database: Session):
     data = database.query(db.User).filter(db.User.email == user_email).first()
 
