@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from sqlalchemy.orm import Session
 
-import db
+from db import db
 
 
 def user_login(database: Session, user_email: str):
